@@ -2,10 +2,48 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HymyのLPです</title>
+    <h3>・・・作成中</p>
+        <style>
+            @keyframes launch {
+                0% {
+                    transform: translateY(100%);
+                }
+
+                100% {
+                    transform: translateY(-100%);
+                }
+            }
+
+            .rocket {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 30px;
+                height: 70px;
+                background: #666;
+                animation: launch 5s linear infinite;
+            }
+
+            .rocket::before,
+            .rocket::after {
+                content: "";
+                position: absolute;
+                bottom: 100%;
+                width: 0;
+                height: 0;
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                border-bottom: 15px solid #666;
+            }
+
+            .rocket::before {
+                left: -15px;
+            }
+
+            .rocket::after {
+                right: -15px;
+            }
+        </style>
 </head>
 
 <body>
